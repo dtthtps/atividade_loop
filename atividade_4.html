@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 04 </title>
+</head>
+<body>
+    <h1>Jogo de Adivinhação</h1>
+    <div id="texto"></div>
+    <script>
+      let numero = Number(prompt("Digite um número para o outro jogador tentar adivinhar:"))
+      let escolha = Number(prompt("Digite o número que você acha ser o correto."))
+      
+
+       if (escolha == numero) { 
+       texto = "Parabéns você acertou de primeira, o número era " + numero
+       document.getElementById("texto").innerHTML=texto
+       } else {
+          texto = "Você tem mais uma tentativa."
+          document.getElementById("texto").innerHTML=texto
+          escolha = Number(prompt("Você errou, tente mais uma vez. Digite o número que você acha ser o correto."))
+          if (escolha == numero) {
+            texto = "Parabéns você acertou na segunda tentativa, o número era " + numero
+            document.getElementById("texto").innerHTML=texto
+
+          } else {
+
+            texto = "Você não tem mais chances"
+            document.getElementById("texto").innerHTML=texto
+          }
+       }
+       
+
+
+
+    </script>
+</body>
+</html>
